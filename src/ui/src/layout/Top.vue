@@ -78,9 +78,9 @@ const icons = [
   vertical-align: middle;
   width: 100%;
   margin: 0px;
+  padding: 0px 20px;
   .column.right {
     text-align: right;
-    padding-right: 20px;
     .dropdown {
       margin: 0px 3px;
       cursor: pointer;

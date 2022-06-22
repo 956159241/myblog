@@ -1,1 +1,1 @@
-<template>个人简历</template>
+<template>作品展览</template>

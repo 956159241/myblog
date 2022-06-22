@@ -25,12 +25,12 @@ export const routes: Array<RouteRecordRaw> = [
       {
         path: '/products',
         component: () => import('@/views/products/index.vue'),
-        name: '产品',
+        name: '作品展览',
       },
       {
         path: '/reading',
         component: () => import('@/views/reading/index.vue'),
-        name: '阅读',
+        name: '读万卷书',
       },
       {
         path: '/technology-sharing',
