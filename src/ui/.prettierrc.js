@@ -1,4 +1,5 @@
 //此处的规则供参考，其中多半其实都是默认值，可以根据个人习惯改写
+// 更多配置文件可参考官网：https://prettier.io/docs/en/options.html
 module.exports = {
   printWidth: 80, //单行长度
   tabWidth: 2, //缩进长度
@@ -16,7 +17,6 @@ module.exports = {
   proseWrap: 'preserve', //不知道怎么翻译
   htmlWhitespaceSensitivity: 'ignore', //对HTML全局空白不敏感
   vueIndentScriptAndStyle: false, //不对vue中的script及style标签缩进
-  endOfLine: 'lf', //结束行形式
   embeddedLanguageFormatting: 'auto', //对引用代码进行格式化
-  endOfLine: "auto",
+  endOfLine: "auto", //结束行形式
 };

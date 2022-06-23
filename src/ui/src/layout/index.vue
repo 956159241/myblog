@@ -1,7 +1,9 @@
 <template>
   <Top></Top>
   <Nav></Nav>
-  <router-view></router-view>
+  <el-scrollbar>
+    <router-view></router-view>
+  </el-scrollbar>
 </template>
 
 <script lang="ts" setup>

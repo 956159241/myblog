@@ -27,7 +27,7 @@ const popInfoMessage = (message: string, duration = 5000) => {
   });
 };
 
-const isMessageConfirm = async (message: string, title: string) => {
+const popConfirmMessage = async (message: string, title: string) => {
   try {
     const result = await ElMessageBox.confirm(message, title, {
       closeOnClickModal: false,
@@ -39,4 +39,9 @@ const isMessageConfirm = async (message: string, title: string) => {
   }
 };
 
-export { popSuccessMessage, popErrorMessage, popInfoMessage, isMessageConfirm };
+export {
+  popSuccessMessage,
+  popErrorMessage,
+  popInfoMessage,
+  popConfirmMessage,
+};
