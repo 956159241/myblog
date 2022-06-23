@@ -46,7 +46,7 @@ import imgQQ from '@/assets/images/qq.jpg';
 import imgJS from '@/assets/images/jianshu.jpg';
 import imgGZH from '@/assets/images/gongzhonghao.jpg';
 // import { ref } from 'vue';
-const icons = [
+const icons: any = [
   { icon: 'icon-wechat-fill', img: imgWeichat },
   { icon: 'icon-QQ', img: imgQQ },
   { icon: '', text: '简书', img: imgJS },

@@ -8,7 +8,7 @@ const Timestamp = `${currentTime.getFullYear()}-${
   currentTime.getMonth() + 1
 }-${currentTime.getDate()}-${currentTime.getHours()}-${currentTime.getMinutes()}-${currentTime.getSeconds()}`;
 
-// https://vitejs.dev/config/
+// 官网地址：https://vitejs.dev/config/
 export default ({ mode }) => {
   const environment = loadEnv(mode, process.cwd()).VITE_ENVIRONMENT;
   return defineConfig({

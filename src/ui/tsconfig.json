@@ -10,6 +10,10 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
+  "exclude": [
+    "node_modules",
+    "src/assets/*"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -46,10 +50,7 @@
       "dom.iterable",
       "scripthost"
     ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
   // "references": [
   //   {
   //     "path": "./tsconfig.vite-config.json"

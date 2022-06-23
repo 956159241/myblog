@@ -2,9 +2,7 @@ import { defineStore } from 'pinia';
 
 export const useLayoutStore = defineStore({
   id: 'layout',
-  persist: {
-    enabled: true,
-  },
+  persist: true,
   state: () => ({
     tabName: 'home',
   }),
