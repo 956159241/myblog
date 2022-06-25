@@ -1,3 +1,17 @@
 <template>
-娱乐与生活
+  <el-card class="box-card">
+    <template #header>
+      <div class="card-header">
+        <span>生活</span>
+      </div>
+    </template>
+  </el-card>
+
+  <el-card class="box-card">
+    <template #header>
+      <div class="card-header">
+        <span>娱乐</span>
+      </div>
+    </template>
+  </el-card>
 </template>

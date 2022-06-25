@@ -18,7 +18,7 @@
 import { ref } from 'vue';
 import router from '@/router';
 import { useLayoutStore } from '@/stores/layout';
-import { StoreDefinition, storeToRefs } from 'pinia';
+import { storeToRefs } from 'pinia';
 
 const store: any = useLayoutStore();
 const { tabName } = storeToRefs(store);

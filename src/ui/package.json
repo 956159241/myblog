@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "build": "vite build",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:4173/ 'cypress open --e2e'",
@@ -21,6 +21,7 @@
     "moment": "^2.29.3",
     "pinia": "^2.0.14",
     "pinia-plugin-persistedstate": "^1.6.1",
+    "swiper": "^8.2.4",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15"
   },
