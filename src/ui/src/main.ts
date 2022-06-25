@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+import { createPersistedState } from 'pinia-plugin-persistedstate';
 
 import App from './App.vue';
 import router from './router';
@@ -15,7 +15,15 @@ import locale from 'element-plus/lib/locale/lang/zh-cn';
 const app = createApp(App);
 const pinia = createPinia();
 
-pinia.use(piniaPluginPersistedstate);
+pinia.use(
+  createPersistedState({
+    storage: sessionStorage,
+    serializer: {
+      serialize: JSON.stringify,
+      deserialize: JSON.parse,
+    },
+  })
+);
 
 // 注册Icons 全局组件，element plus icon
 Object.keys(Icons).forEach((key) => {
