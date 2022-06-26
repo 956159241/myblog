@@ -1,0 +1,12 @@
+.row {
+  height: calc(100vh - 120px);
+  .column {
+    height: 100%;
+  }
+
+  .el-menu {
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+}

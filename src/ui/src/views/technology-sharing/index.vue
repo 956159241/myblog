@@ -1,8 +1,8 @@
 <template>
-  <el-row class="tac">
-    <el-col :span="4">
+  <el-row class="row">
+    <el-col :span="4" class="column">
       <el-menu
-        default-active="2"
+        default-active="1"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -10,15 +10,8 @@
         <el-sub-menu index="1">
           <template #title>
             <el-icon><location /></el-icon>
-            <span>Navigator One</span>
+            <span>Web前端</span>
           </template>
-          <el-menu-item-group title="Group One">
-            <el-menu-item index="1-1">item one</el-menu-item>
-            <el-menu-item index="1-2">item one</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="Group Two">
-            <el-menu-item index="1-3">item three</el-menu-item>
-          </el-menu-item-group>
           <el-sub-menu index="1-4">
             <template #title>item four</template>
             <el-menu-item index="1-4-1">item one</el-menu-item>
@@ -38,6 +31,8 @@
         </el-menu-item>
       </el-menu>
     </el-col>
+
+    <el-col :span="20" class="column">测试内容</el-col>
   </el-row>
 </template>
 
@@ -55,3 +50,7 @@ const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
 </script>
+
+<style lang="scss" scoped>
+@import './index.scss';
+</style>

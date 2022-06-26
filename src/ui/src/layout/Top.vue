@@ -1,7 +1,7 @@
 <template>
   <el-row class="row box">
-    <el-col :span="12" class="column left">欢迎来到小站</el-col>
-    <el-col :span="12" class="column right">
+    <el-col :xs="0" :span="12" class="column left">欢迎来到小站</el-col>
+    <el-col :xs="24" :span="12" class="column right">
       <el-dropdown class="dropdown" v-for="(item, index) in icons" :key="index">
         <span
           v-if="item.icon"

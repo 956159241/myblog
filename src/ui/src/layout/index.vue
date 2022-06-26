@@ -14,7 +14,5 @@ import Footer from './Footer.vue';
 </script>
 
 <style lang="scss" scoped>
-.scrollbar {
-  height: auto;
-}
+@import './index.scss';
 </style>
