@@ -34,5 +34,8 @@ const handleSelect = (key: string, keyPath: string[]) => {
 <style lang="scss" scoped>
 .menu {
   justify-content: flex-end;
+  &:deep(.el-menu--horizontal) {
+    border-bottom: none;
+  }
 }
 </style>
