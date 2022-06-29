@@ -2,33 +2,17 @@
   <el-row class="row">
     <el-col :span="4" class="column">
       <el-menu
-        default-active="1"
-        class="el-menu-vertical-demo"
+        class="el-menu-vertical"
         @open="handleOpen"
         @close="handleClose"
+        :collapse-transition="false"
+        router
       >
-        <el-sub-menu index="1">
-          <template #title>
-            <el-icon><location /></el-icon>
-            <span>Web前端</span>
-          </template>
-          <el-sub-menu index="1-4">
-            <template #title>item four</template>
-            <el-menu-item index="1-4-1">item one</el-menu-item>
-          </el-sub-menu>
-        </el-sub-menu>
-        <el-menu-item index="2">
-          <el-icon><icon-menu /></el-icon>
-          <span>Navigator Two</span>
-        </el-menu-item>
-        <el-menu-item index="3" disabled>
-          <el-icon><document /></el-icon>
-          <span>Navigator Three</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <el-icon><setting /></el-icon>
-          <span>Navigator Four</span>
-        </el-menu-item>
+        <SidebarItem
+          v-for="route in menuList"
+          :key="route.id"
+          :item="route"
+        ></SidebarItem>
       </el-menu>
     </el-col>
 
@@ -37,18 +21,23 @@
 </template>
 
 <script lang="ts" setup>
+import data from './data';
+import SidebarItem from './SidebarItem.vue';
 import {
   Document,
   Menu as IconMenu,
   Location,
   Setting,
 } from '@element-plus/icons-vue';
+import CommonUtils from '@/utils/commonUtils';
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
+
+const menuList = CommonUtils.convertMenuArrToTree(data as any);
 </script>
 
 <style lang="scss" scoped>

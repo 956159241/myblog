@@ -25,7 +25,8 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
-    semi: 2,
+    semi: 'off',
+    '@typescript-eslint/semi': ['error'],
     //引号类型 `` "" ''
     quotes: [1, 'single'],
     'no-console': 0,
@@ -39,10 +40,20 @@ module.exports = {
       'error',
       {
         multiline: {
-          delimiter: 'none',
+          delimiter: 'comma',
+          requireLast: true,
         },
         singleline: {
           delimiter: 'comma',
+          requireLast: true,
+        },
+        overrides: {
+          interface: {
+            multiline: {
+              delimiter: 'semi',
+              requireLast: true,
+            },
+          },
         },
       },
     ],
