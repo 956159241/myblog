@@ -21,10 +21,6 @@
   </div>
 </template>
 
-<style scoped>
-.footer {
-  margin: 10px 0px;
-  width: 100%;
-  text-align: center;
-}
+<style lang="scss" scoped>
+@import './index.scss';
 </style>

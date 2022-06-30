@@ -1,9 +1,9 @@
 <template>
   <Top></Top>
   <Nav></Nav>
-  <el-scrollbar class="scrollbar">
+  <div class="content">
     <router-view></router-view>
-  </el-scrollbar>
+  </div>
   <Footer></Footer>
 </template>
 

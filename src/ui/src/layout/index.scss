@@ -1,8 +1,67 @@
-.scrollbar {
-  height: auto;
+.top.row.box {
+  background: #e6e6e6;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0px;
+  padding: 0px 20px;
+  .column.right {
+    text-align: right;
+    .dropdown {
+      margin: 0px 3px;
+      cursor: pointer;
+    }
+    .iconfont {
+      font-size: 25px;
+      &:deep(.icon-gongzhonghao) {
+        &:before {
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+    .text {
+      position: relative;
+      top: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+.dropdown-img {
+  width: 200px;
+  img {
+    width: 100%;
+    height: auto;   
+  }
 }
 
 
-@media screen {
-  
+.menu {
+  justify-content: flex-end;
+  border-bottom: none;
+  .el-menu-item {
+    border: none !important;
+    background-color: transparent;
+  }
+
+  .el-menu-item:hover,
+  .el-menu-item:focus {
+    background-color: transparent !important;
+  }
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.footer {
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
 }

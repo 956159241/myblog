@@ -32,17 +32,5 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </script>
 
 <style lang="scss" scoped>
-.menu {
-  justify-content: flex-end;
-  border-bottom: none;
-  .el-menu-item {
-    border: none !important;
-    background-color: transparent;
-  }
-
-  .el-menu-item:hover,
-  .el-menu-item:focus {
-    background-color: transparent !important;
-  }
-}
+@import './index.scss';
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <el-row class="row box">
+  <el-row class="top row box">
     <el-col :xs="0" :span="12" class="column left">欢迎来到小站</el-col>
     <el-col :xs="24" :span="12" class="column right">
       <el-dropdown class="dropdown" v-for="(item, index) in icons" :key="index">
@@ -42,8 +42,8 @@
 <script lang="ts" setup>
 import CommonUtils from '@/utils/commonUtils';
 import imgWeichat from '@/assets/images/weichat.jpg';
-import imgQQ from '@/assets/images/qq.jpg';
-import imgJS from '@/assets/images/jianshu.jpg';
+import imgQQ from '@/assets/images/qq.png';
+import imgJS from '@/assets/images/jianshu.png';
 import imgGZH from '@/assets/images/gongzhonghao.jpg';
 // import { ref } from 'vue';
 const icons: any = [
@@ -71,43 +71,5 @@ const icons: any = [
 </script>
 
 <style lang="scss" scoped>
-.row.box {
-  background: #e6e6e6;
-  height: 30px;
-  line-height: 30px;
-  vertical-align: middle;
-  width: 100%;
-  margin: 0px;
-  padding: 0px 20px;
-  .column.right {
-    text-align: right;
-    .dropdown {
-      margin: 0px 3px;
-      cursor: pointer;
-    }
-    .iconfont {
-      font-size: 25px;
-      &:deep(.icon-gongzhonghao) {
-        &:before {
-          position: relative;
-          top: 5px;
-        }
-      }
-    }
-    .text {
-      position: relative;
-      top: 5px;
-      font-size: 16px;
-    }
-  }
-}
-
-.dropdown-img {
-  height: 300px;
-  width: 300px;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
+@import './index.scss';
 </style>
