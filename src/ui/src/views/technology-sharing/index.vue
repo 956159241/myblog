@@ -6,8 +6,8 @@
       @close="handleClose"
       :collapse-transition="false"
       :unique-opened="true"
-      :collapse="false"
-      :style="{ width: false ? '56px' : '300px' }"
+      :collapse="collapse"
+      :style="{ width: collapse ? '56px' : '300px' }"
     >
       <SidebarItem
         v-for="route in menuList"
@@ -15,7 +15,9 @@
         :item="route"
       ></SidebarItem>
     </el-menu>
-    <div style="flex: 1; padding: 10px; background-color: rgba(0,0,0,0.1);">测试内容</div>
+    <div style="flex: 1; padding: 10px; background-color: rgba(0, 0, 0, 0.1)">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,9 @@ import data from './data';
 import SidebarItem from './SidebarItem.vue';
 import { MenuNode } from './types';
 import { convertMenuArrToTree } from './index';
+import { onUnmounted, ref } from 'vue';
+
+const collapse = ref(false);
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
@@ -34,6 +39,21 @@ const handleClose = (key: string, keyPath: string[]) => {
 };
 
 const menuList = convertMenuArrToTree(data as MenuNode[]);
+
+window.addEventListener('resize', () => setCollapse());
+
+const setCollapse = () => {
+  if (document.body.clientWidth < 900) {
+    collapse.value = true;
+  } else {
+    collapse.value = false;
+  }
+};
+setCollapse();
+
+onUnmounted(() => {
+  window.removeEventListener('resize', () => setCollapse());
+});
 </script>
 
 <style lang="scss" scoped>

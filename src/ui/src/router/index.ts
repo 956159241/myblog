@@ -13,6 +13,26 @@ export const routes: Array<RouteRecordRaw> = [
         name: '首页',
       },
       {
+        path: '/technology-sharing',
+        component: () => import('@/views/technology-sharing/index.vue'),
+        name: '技术分享',
+        redirect: '/technology-sharing/article-list',
+        children: [
+          {
+            path: '/technology-sharing/article',
+            component: () =>
+              import('@/views/technology-sharing/article/index.vue'),
+            name: '文章',
+          },
+          {
+            path: '/technology-sharing/article-list',
+            component: () =>
+              import('@/views/technology-sharing/article-list/index.vue'),
+            name: '文章列表',
+          },
+        ],
+      },
+      {
         path: '/life-entertainment',
         component: () => import('@/views/life-entertainment/index.vue'),
         name: '生活娱乐',
@@ -31,11 +51,6 @@ export const routes: Array<RouteRecordRaw> = [
         path: '/reading',
         component: () => import('@/views/reading/index.vue'),
         name: '读万卷书',
-      },
-      {
-        path: '/technology-sharing',
-        component: () => import('@/views/technology-sharing/index.vue'),
-        name: '技术分享',
       },
       {
         // 匹配所有路径  vue2使用*   vue3使用/:pathMatch(.*)*或/:pathMatch(.*)或/:catchAll(.*)
