@@ -8,9 +8,9 @@
     <el-menu-item index="home">首页</el-menu-item>
     <el-menu-item index="technology-sharing">技术分享</el-menu-item>
     <el-menu-item index="products">作品展览</el-menu-item>
-    <el-menu-item index="reading">读万卷书</el-menu-item>
-    <el-menu-item index="life-entertainment">行万里路</el-menu-item>
-    <el-menu-item index="personal-info">个人信息</el-menu-item>
+    <!-- <el-menu-item index="reading">读万卷书</el-menu-item> -->
+    <!-- <el-menu-item index="life-entertainment">行万里路</el-menu-item> -->
+    <!-- <el-menu-item index="personal-info">个人信息</el-menu-item> -->
   </el-menu>
 </template>
 
@@ -24,8 +24,7 @@ const store: any = useLayoutStore();
 const { tabName } = storeToRefs(store);
 
 const activeIndex = ref(tabName.value);
-const handleSelect = (key: string, keyPath: string[]) => {
-  // console.log(key, keyPath);
+const handleSelect = (key: string) => {
   router.push(key);
   store.setTabName(key);
 };

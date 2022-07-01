@@ -1,19 +1,16 @@
 <template>
   <el-menu-item
-    :index="item ? item.url : ''"
+    :index="item ? item.index : ''"
     v-if="!item || !item.children || item.children.length === 0"
   >
-    <el-icon :size="12">
-      <component :is="item?.icon"></component>
-    </el-icon>
+    <el-icon><span :class="`iconfont ${item?.icon}`"></span></el-icon>
     <template #title>{{ item?.menuName }}</template>
   </el-menu-item>
 
-  <el-sub-menu :index="item ? item.id : ''" v-else>
+  <el-sub-menu :index="item ? item.id : ''" v-else :collapse="true">
     <template #title>
-      <el-icon :size="12">
-        <component :is="item?.icon"></component>
-      </el-icon>
+      <el-icon><span :class="`iconfont ${item?.icon}`"></span></el-icon>
+
       <span>{{ item?.menuName }}</span>
     </template>
 
@@ -21,7 +18,7 @@
       <template v-if="child.children && child.children.length > 0">
         <sidebar-item :key="child.id" :item="child" />
       </template>
-      <el-menu-item v-else :index="child.url">
+      <el-menu-item v-else :index="child.index">
         <span class="tab sub">{{ child.menuName }}</span>
       </el-menu-item>
     </div>
@@ -30,7 +27,7 @@
 
 <script lang="ts" setup>
 import { PropType, toRefs } from 'vue';
-import { MenuNode } from '@/model/menuNode';
+import { MenuNode } from './types';
 
 const props = defineProps({
   collapse: {

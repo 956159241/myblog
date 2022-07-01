@@ -7,7 +7,7 @@ interface MenuNode {
   menuType: number;
   permsionCode: string;
   sortNo: number;
-  url: string;
+  index: string;
   icon: string;
 }
 
