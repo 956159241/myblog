@@ -1,6 +1,6 @@
 <template>
   <el-menu-item
-    :index="item ? item.index : ''"
+    :index="item ? item.id : ''"
     v-if="!item || !item.children || item.children.length === 0"
   >
     <el-icon><span :class="`iconfont ${item?.icon}`"></span></el-icon>
@@ -18,7 +18,7 @@
       <template v-if="child.children && child.children.length > 0">
         <sidebar-item :key="child.id" :item="child" />
       </template>
-      <el-menu-item v-else :index="child.index">
+      <el-menu-item v-else :index="child.id">
         <span class="tab sub">{{ child.menuName }}</span>
       </el-menu-item>
     </div>

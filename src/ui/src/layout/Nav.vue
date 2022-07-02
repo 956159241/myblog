@@ -5,9 +5,9 @@
     mode="horizontal"
     @select="handleSelect"
   >
-    <el-menu-item index="home">首页</el-menu-item>
-    <el-menu-item index="technology-sharing">技术分享</el-menu-item>
-    <el-menu-item index="products">作品展览</el-menu-item>
+    <el-menu-item index="Home">首页</el-menu-item>
+    <el-menu-item index="TechnologySharing">技术分享</el-menu-item>
+    <el-menu-item index="Products">作品展览</el-menu-item>
     <!-- <el-menu-item index="reading">读万卷书</el-menu-item> -->
     <!-- <el-menu-item index="life-entertainment">行万里路</el-menu-item> -->
     <!-- <el-menu-item index="personal-info">个人信息</el-menu-item> -->
@@ -25,7 +25,7 @@ const { tabName } = storeToRefs(store);
 
 const activeIndex = ref(tabName.value);
 const handleSelect = (key: string) => {
-  router.push(key);
+  router.push({ name: key });
   store.setTabName(key);
 };
 </script>

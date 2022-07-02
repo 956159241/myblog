@@ -1,13 +1,10 @@
 interface MenuNode {
   id: string;
   parentId: string;
-  children: Array<MenuNode> | undefined;
-  systemId: string;
+  children?: Array<MenuNode>;
   menuName: string;
   menuType: number;
-  permsionCode: string;
   sortNo: number;
-  index: string;
   icon: string;
 }
 

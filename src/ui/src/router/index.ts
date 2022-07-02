@@ -10,47 +10,47 @@ export const routes: Array<RouteRecordRaw> = [
       {
         path: '/home',
         component: () => import('@/views/home/index.vue'),
-        name: '首页',
+        name: 'Home',
       },
       {
         path: '/technology-sharing',
         component: () => import('@/views/technology-sharing/index.vue'),
-        name: '技术分享',
+        name: 'TechnologySharing',
         redirect: '/technology-sharing/article-list',
         children: [
           {
             path: '/technology-sharing/article',
             component: () =>
               import('@/views/technology-sharing/article/index.vue'),
-            name: '文章',
+            name: 'TechnologySharingArticle',
           },
           {
             path: '/technology-sharing/article-list',
             component: () =>
               import('@/views/technology-sharing/article-list/index.vue'),
-            name: '文章列表',
+            name: 'TechnologySharingArticleList',
           },
         ],
       },
       {
         path: '/life-entertainment',
         component: () => import('@/views/life-entertainment/index.vue'),
-        name: '生活娱乐',
+        name: 'LifeEntertainment',
       },
       {
         path: '/personal-info',
         component: () => import('@/views/personal-info/index.vue'),
-        name: '个人信息',
+        name: 'PersonalInfo',
       },
       {
         path: '/products',
         component: () => import('@/views/products/index.vue'),
-        name: '作品展览',
+        name: 'Products',
       },
       {
         path: '/reading',
         component: () => import('@/views/reading/index.vue'),
-        name: '读万卷书',
+        name: 'Reading',
       },
       {
         // 匹配所有路径  vue2使用*   vue3使用/:pathMatch(.*)*或/:pathMatch(.*)或/:catchAll(.*)
@@ -65,6 +65,12 @@ export const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  // console.log('to:' + to.fullPath);
+  // console.log('from:' + from.fullPath);
+  next();
 });
 
 export default router;
