@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import router from '@/router';
 import { useLayoutStore } from '@/stores/layout';
 import { storeToRefs } from 'pinia';
@@ -23,8 +23,15 @@ import { storeToRefs } from 'pinia';
 const store: any = useLayoutStore();
 const { tabName } = storeToRefs(store);
 
-const activeIndex = ref(tabName.value);
+let activeIndex = ref('');
+onMounted(() => {
+  activeIndex.value = tabName.value || 'Home';
+});
 const handleSelect = (key: string) => {
+  setSelectedTab(key);
+};
+
+const setSelectedTab = (key: string) => {
   router.push({ name: key });
   store.setTabName(key);
 };
