@@ -5,11 +5,33 @@
 </template>
 
 <script lang="ts" setup>
+import { ref, shallowRef } from 'vue';
+
 import data from './data';
 import { marked } from 'marked';
-import { ref } from 'vue';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/felipec.css';
 
-const content = ref(marked(data));
+const render = new marked.Renderer();
+marked.setOptions({
+  renderer: render, // 这是必填项
+  gfm: true, // 启动类似于Github样式的Markdown语法
+  pedantic: false, // 只解析符合Markdwon定义的，不修正Markdown的错误
+  sanitize: false, // 原始输出，忽略HTML标签（关闭后，可直接渲染HTML标签）
+  langPrefix: 'hljs language-', // highlight.js css expects a top-level 'hljs' class.
+  breaks: false,
+  smartLists: true,
+  smartypants: false,
+  xhtml: false,
+  // 高亮的语法规范
+  highlight: (code: any, lang: any) =>
+    hljs.highlight(code, { language: lang }).value,
+});
+
+const content = shallowRef('');
+content.value = marked(data);
+
+// const content = ref(marked(data));
 </script>
 
 <style lang="scss" scoped>
@@ -22,6 +44,11 @@ const content = ref(marked(data));
       max-width: 100%;
       display: block;
       margin: 5px auto;
+    }
+
+    code.hljs {
+      background: url(http://qiniu.iotzzh.com/timg.jpg) !important;
+      background-size: cover !important;
     }
     h1,
     h2,

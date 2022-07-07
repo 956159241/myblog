@@ -14,12 +14,26 @@ export default `
 \`\`\`javascript
 function name(params:type) {
    var a = 11;
+   console.log('hello world');console.log('hello world');console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
+   console.log('hello world');
    console.log('hello world');
 }
 
 \`\`\`
 
-
+background: url(http://qiniu.iotzzh.com/timg.jpg);
+    background-size: cover;
 在开发之前，我们先简单了解下浏览器是什么呢？
 一个新的电脑里面，我们会发现win10自带的浏览器Edge，就是下面这个样子：
 ![pic1.png](https://upload-images.jianshu.io/upload_images/2789632-c55889b569e1dd36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

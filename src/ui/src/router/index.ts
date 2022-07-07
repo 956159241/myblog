@@ -16,7 +16,7 @@ export const routes: Array<RouteRecordRaw> = [
         path: '/technology-sharing',
         component: () => import('@/views/technology-sharing/index.vue'),
         name: 'TechnologySharing',
-        redirect: '/technology-sharing/article-list',
+        redirect: '/technology-sharing/article',
         children: [
           {
             path: '/technology-sharing/article',
