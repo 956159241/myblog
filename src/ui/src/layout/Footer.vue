@@ -15,7 +15,7 @@
         </span>
       </el-col>
       <el-col :xs="0" :sm="0" :md="6" :lg="6" :xl="6" class="foot">
-        <span>关于本站|站点留言|活动支持|链接友情</span>
+        <span>关于本站</span>
       </el-col>
     </el-row>
   </div>

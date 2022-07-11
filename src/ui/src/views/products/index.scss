@@ -1,4 +1,4 @@
-.scrollbar{
+.scrollbar {
   &:deep(.row) {
     width: 100%;
     margin: 0px !important;
@@ -9,4 +9,30 @@
     padding: 0px !important;
     margin: 0px !important;
   }
+
+  .column.right {
+    padding-left: 15px !important;
+  }
+}
+
+.box-card {
+  margin-bottom: 15px;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tags {
+  line-height: 20px;
+  .tag + .tag {
+    margin-left: 10px;
+  }
+}
+
+.demo-link,
+.short-desc {
+  line-height: 30px;
 }
