@@ -1,13 +1,20 @@
 <template>
   <el-row>
     <el-col :span="12" :xs="24">
-      <el-carousel :interval="4000" type="card" height="200px">
+      <el-carousel
+        @change="changeCarousel"
+        :interval="2000"
+        type="card"
+        height="200px"
+      >
         <el-carousel-item v-for="item in 6" :key="item">
           <h3 text="2xl" justify="center">{{ item }}</h3>
         </el-carousel-item>
       </el-carousel>
     </el-col>
-    <el-col :span="12" :xs="0" style="text-align: center">简介</el-col>
+    <el-col :span="12" :xs="0" style="text-align: center">
+      简介{{ index1 + 1 }}
+    </el-col>
   </el-row>
 
   <div class="collapse">
@@ -32,6 +39,11 @@
 import { ref } from 'vue';
 
 const activeName = ref('');
+const index1 = ref(0);
+const changeCarousel = (index: any) => {
+  index1.value = index;
+  // todo: 根据轮播显示的图片，显示简介
+};
 </script>
 
 <style scoped>
