@@ -1,10 +1,38 @@
 <template>
-  <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3 text="2xl" justify="center">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+  <el-row>
+    <el-col :span="12" :xs="24">
+      <el-carousel :interval="4000" type="card" height="200px">
+        <el-carousel-item v-for="item in 6" :key="item">
+          <h3 text="2xl" justify="center">{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+    </el-col>
+    <el-col :span="12" :xs="0" style="text-align: center">简介</el-col>
+  </el-row>
+
+  <div class="collapse">
+    <el-collapse v-model="activeName" accordion>
+      <el-collapse-item title="推荐书籍" name="1">
+        <div>大学</div>
+        <div>中庸</div>
+      </el-collapse-item>
+      <el-collapse-item title="中华随笔" name="2">
+        <div>读xxx后感</div>
+        <div>观xxx后感</div>
+      </el-collapse-item>
+      <el-collapse-item title="中华酱油诗" name="3">
+        <div>酱油1</div>
+        <div>酱油2</div>
+      </el-collapse-item>
+    </el-collapse>
+  </div>
 </template>
+
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const activeName = ref('');
+</script>
 
 <style scoped>
 .el-carousel__item h3 {
