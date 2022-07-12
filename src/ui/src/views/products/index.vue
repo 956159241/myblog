@@ -6,7 +6,6 @@
           <template #header>
             <div class="card-header">
               <span>作品展示</span>
-              <!-- <el-button class="button" text>时间排序</el-button> -->
             </div>
           </template>
           <el-card class="box-card" v-for="item in 10" :key="item">

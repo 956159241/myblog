@@ -6,6 +6,7 @@ const popSuccessMessage = (message: string, duration = 5000) => {
     grouping: true,
     type: 'success',
     duration,
+    showClose: true,
   });
 };
 
@@ -15,6 +16,7 @@ const popErrorMessage = (message: string, duration = 5000) => {
     grouping: true,
     type: 'error',
     duration,
+    showClose: true,
   });
 };
 
@@ -24,6 +26,7 @@ const popInfoMessage = (message: string, duration = 5000) => {
     grouping: true,
     type: 'info',
     duration,
+    showClose: true,
   });
 };
 

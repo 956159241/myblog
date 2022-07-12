@@ -66,3 +66,17 @@
   width: 100%;
   text-align: center;
 }
+
+.icon-text {
+  cursor: pointer;
+  color: var(--el-text-color-regular);
+  margin: 0 3px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+  font-size: 25px;
+  font-family: 'iconfont';
+  font-style: normal;
+  position: relative;
+  bottom: 3px;
+}

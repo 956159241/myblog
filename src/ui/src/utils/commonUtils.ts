@@ -1,4 +1,4 @@
-import { popErrorMessage, popSuccessMessage } from '@/components/hs-message';
+import { popErrorMessage, popSuccessMessage } from '@/components/zh-message';
 import Clipboard from 'clipboard';
 export default class CommonUtils {
   static copy = (className: string, successInfo: string, errorInfo: string) => {
