@@ -11,13 +11,11 @@
     <el-menu-item index="TechnologySharing">技术分享</el-menu-item>
     <el-menu-item index="Products">作品展览</el-menu-item>
     <el-menu-item index="Reading">读万卷书</el-menu-item>
-    <el-menu-item index="LifeEntertainment">行万里路</el-menu-item>
+    <!-- <el-menu-item index="LifeEntertainment">行万里路</el-menu-item> -->
     <!-- <el-menu-item index="personal-info">个人信息</el-menu-item> -->
   </el-menu>
-  <el-icon v-else @click="openMenu" :size="30">
-    <Expand
-      style="width: 1.5em; height: 1.5em; margin-right: 8px; padding-left: 10px"
-    />
+  <el-icon v-else @click="openMenu" :size="30" style="padding-left: 15px">
+    <Expand style="width: 1.5em; height: 1.5em" />
   </el-icon>
   <el-drawer
     custom-class="menu-drawer"
@@ -36,7 +34,7 @@
       <el-menu-item index="TechnologySharing">技术分享</el-menu-item>
       <el-menu-item index="Products">作品展览</el-menu-item>
       <el-menu-item index="Reading">读万卷书</el-menu-item>
-      <el-menu-item index="LifeEntertainment">行万里路</el-menu-item>
+      <!-- <el-menu-item index="LifeEntertainment">行万里路</el-menu-item> -->
       <!-- <el-menu-item index="personal-info">个人信息</el-menu-item> -->
     </el-menu>
   </el-drawer>
@@ -81,7 +79,7 @@ const setSelectedTab = (key: string) => {
 
 <style lang="scss">
 .menu-drawer {
-  width: 80% !important;
+  width: 60% !important;
 }
 
 .web-menu {

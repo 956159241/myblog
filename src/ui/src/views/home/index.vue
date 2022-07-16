@@ -14,14 +14,22 @@
                     <p class="desc">
                       今天无意看到tsconfig.json的文件的开始位置有些小小的红色的波浪线，鼠标移入一看，提示：无法写入....,如下：
                       本来想着去百度下的，...
+                      今天无意看到tsconfig.json的文件的开始位置有些小小的红色的波浪线，鼠标移入一看，提示：无法写入....,如下：
+                      本来想着去百度下的，...
+                      今天无意看到tsconfig.json的文件的开始位置有些小小的红色的波浪线，鼠标移入一看，提示：无法写入....,如下：
+                      本来想着去百度下的，...
+                      今天无意看到tsconfig.json的文件的开始位置有些小小的红色的波浪线，鼠标移入一看，提示：无法写入....,如下：
+                      本来想着去百度下的，...
                     </p>
-                    <div class="footer">
-                    <el-icon><View /></el-icon>18
-                    <el-link class="video-address">视频地址</el-link>
+                    <div class="footer" style="line-height: 10px">
+                      <el-icon style="position: relative; top: 3px">
+                        <View />
+                      </el-icon>
+                      18
+                      <el-link class="video-address">视频地址</el-link>
                     </div>
-
                   </div>
-                  <div class="image-box">
+                  <div class="image-box" v-if="item !== 2">
                     <img class="image" src="http://qiniu.iotzzh.com/timg.jpg" />
                   </div>
                 </li>
@@ -37,7 +45,7 @@
           <div class="box">
             <div>
               <h5>个人介绍</h5>
-              <p>一名软件开发从业人员</p>
+              <p>中华乃吾名，张氏。</p>
               <h5>个人网站</h5>
               <el-link href="https://www.iotzzh.com" target="_new">
                 https://www.iotzzh.com

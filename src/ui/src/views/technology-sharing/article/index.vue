@@ -1,5 +1,14 @@
 <template>
   <el-scrollbar class="scrollbar">
+    <div>
+      <div>HTML第一章</div>
+      <div>
+        <span>字数 100</span>
+        <span>阅读 18</span>
+        <span>视频地址: </span>
+        <span>2022-07-16 12:12:12</span>
+      </div>
+    </div>
     <div class="output" v-html="content"></div>
   </el-scrollbar>
 </template>
