@@ -1,9 +1,14 @@
 export default `
 ## 前言
-![测试显示](http://qiniu-tujieqianduan.iotzzh.com/Parallel_Class_MSDN.png)
-<div style="text-align: center">
-<img src="http://qiniu-tujieqianduan.iotzzh.com/Parallel_Class_MSDN.png"/>
+
+<div style="text-align: center; color: red;  width: 100%; height: 300px; background: url(https://qiniu.iotzzh.com/timg.jpg
+)">
+    <h1>测试</h1>
+    关关雎鸠，在河之洲。
+    窈窕淑女，君子好逑。
 </div>
+
+
 上图展示了一个浏览器简单的工作方式，它利用网页连接了我们与网络。它可以打开网络上的网页，供我们阅读，娱乐，工作等等。
 
 **网页是基于浏览器开发的**，开发简单网页，我们只需要掌握**HTML**即可；如果希望网页有点样式，好看一些，还需要学习**CSS**；如果还希望网页能做一些交互或者展示动态的数据等功能，还需要掌握**Javascript**。也就是：
