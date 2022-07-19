@@ -63,8 +63,6 @@ const handleSelect = (index: string, indexPath: string, item: any) => {
 
 const menuList = convertMenuArrToTree(data as MenuNode[]);
 
-window.addEventListener('resize', () => setCollapse());
-
 const setCollapse = () => {
   if (document.body.clientWidth < 900) {
     collapse.value = true;
@@ -74,6 +72,7 @@ const setCollapse = () => {
 };
 setCollapse();
 
+window.addEventListener('resize', () => setCollapse());
 onUnmounted(() => {
   window.removeEventListener('resize', () => setCollapse());
 });

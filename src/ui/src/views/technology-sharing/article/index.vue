@@ -66,6 +66,7 @@ content.value = marked(data);
     h5,
     h6 {
       text-align: center;
+      margin: 10px 0px;
     }
     p {
       text-indent: 2em;

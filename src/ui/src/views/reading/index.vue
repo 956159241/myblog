@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col :span="12" :xs="24">
+    <el-col :span="14" :xs="24">
       <el-carousel
         @change="changeCarousel"
         :interval="2000"
@@ -12,7 +12,7 @@
         </el-carousel-item>
       </el-carousel>
     </el-col>
-    <el-col :span="12" :xs="0" style="text-align: center">
+    <el-col :span="8" :xs="0" style="text-align: center">
       简介{{ index1 + 1 }}
     </el-col>
   </el-row>
